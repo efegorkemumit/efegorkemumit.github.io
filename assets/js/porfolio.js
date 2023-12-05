@@ -30,3 +30,15 @@ function showSection(sectionId) {
         easing: 'easeInOutQuad'
     });
 }
+
+window.addEventListener('load', function() {
+    // 30 saniye delay ekleyerek loader'ı gizle
+    setTimeout(function() {
+      var loaderWrapper = document.querySelector('.loader-wrapper');
+      loaderWrapper.style.display = 'none';
+
+      // Sayfa yüklendikten sonra sayfa içeriğini göster
+      var content = document.querySelector('.content');
+      content.classList.remove('hidden');
+    }, 2000); // 30 saniye
+  });
